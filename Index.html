@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <script>
-   var miSustantivo="hombre";
-   var miAdjetivo="alto";
-   var miVerbo="corrio";
-   var miAdverbio="velozmente";
-   var palabrasEnBlanco="El"  + " "  +  miSustantivo + " "  + miAdjetivo + " "  +  miVerbo +" "  +  miAdverbio + " a la casa";
-   console.log(palabrasEnBlanco);
+var miArreglo=[3, 20, 17];
+//console.log(miArreglo[1]); // acceso a posiciones de arreglos
+var sumaArreglo=miArreglo[0] + miArreglo[1] + miArreglo[2];
+console.log(sumaArreglo);
+var miCurso=["Mateo", "Lucas", "Nacho", "Juan"];
+miCurso[1]=["Stefano", "Marco" , "Marcos"];
+//console.log(miCurso);
+var notasPorEstudiante=[["Mateo", 90 ], ["Nacho", 77]];
+//console.log(notasPorEstudiante);
+var listaDeProductos=[["Camisa" , 12560 , "C112"], ["Jeans" , 11880, "J438"], ["zapatilla" , 8560 , "Z325"]];
+//console.log(listaDeProductos[2] [0]); // acceso a arreglos anidados
+var vehiculos=["ford Fiesta", "Ford Fusion", "Volkswagen Suran"]
+vehiculos.push("Volkswagen T-Cross"); // agregar elemento al final de un arreglo
+//console.log(vehiculos);
+var vehiculoNuevo;
+var vehiculos=["Ford Fiesta" , "Ford Fusion", "Volkswagen Suran", "Volkswagen T-Cross"];
+vehiculoNuevo=vehiculos.pop(); // remover ultimo elemento de un arreglo
+//console.log(vehiculos);
+//console.log(vehiculoNuevo);
+var vehiculos=["Ford Fiesta", "Ford Fusion", "Volkswagen Suran", "Volkswagen T-Cross"];
+vehiculos.shift(); // remover primer elemento de un arreglo
+//console.log(vehiculos);
+var vehiculos=["Ford Fusion", "Volkswagen Suran", "Volkswagen T-Cross"]
+vehiculos.unshift("Ford Fiesta"); // agregar al principio de un arreglo
+console.log(vehiculos);
 
 
 
