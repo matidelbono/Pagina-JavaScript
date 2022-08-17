@@ -1,21 +1,53 @@
 <!DOCTYPE html>
 <script>
-var miListaDeCompras=[["Cereales" , 4], ["Leche" , 2], ["Pan", 2], ["Naranjas", 3], ["Carne", 1]];
-//Cereales
-console.log( "Voy a comprar " + miListaDeCompras[0][1] +  " cajas de " + miListaDeCompras [0] [0]);
-//Leche
-console.log("Voy a comprar " + miListaDeCompras[1][1] +  " litros de " + miListaDeCompras [1] [0]);
-// Pan
-console.log("Voy a comprar " + miListaDeCompras[2][1] +  " varillas de " + miListaDeCompras [2] [0]);
-// Naranjas
-console.log("Voy a comprar " + miListaDeCompras[3][1] +  " " + miListaDeCompras [3] [0]);
-//carne
-console.log("Voy a comprar " + miListaDeCompras[4][1] +  " kilo de " + miListaDeCompras [4] [0]);
-
-
-
-
-
-
+function mostrarMensaje() {
+console.log("Hola Mami y Papi!")
+}
+mostrarMensaje();
+function sumar(a,b) { // a y b son argumentos
+    var suma=a+b;
+    console.log(" el resultado de " +  a   +  " + "  +   b + " es: " + suma)
+}
+sumar(11,5);
+function concatenarTresCadenas(cadena1,cadena2,cadena3) {
+    console.log(cadena1 + " " + cadena2 + " " + cadena3);
+}
+concatenarTresCadenas("Estoy", "realizando", "un curso de JavaScript");
+var miVariableGlobal=3; // variable global: se puede usar en todo el programa
+function mostrarValor() {
+    console.log(miVariableGlobal)
+}
+mostrarValor()
+function mostrarValorLocal() {
+    var miVariableLocal=20;
+    console.log(miVariableLocal);
+}
+//console.log(miVariableLocal);  Error: las variables locales solo se pueden acceder en el marco de definicion
+mostrarValorLocal()
+var miNombre="Matias"
+function mostrarMiNombre() {
+    var miNombre="Omar";
+    console.log(miNombre) // la variable local tiene mayor prioridad que la global
+}
+mostrarMiNombre()
+console.log(miNombre);
+function suma (a,b) {
+    return a + b;
+} 
+(suma(17,20));
+function restar (a,b) {
+    console.log(b-a);
+}
+console.log(restar(3,20)); // retorna undefined por defecto
+function multiplicar(a,b) {
+    return a*b;
+}
+var producto=multiplicar(5,11);
+console.log(producto);
+function retornarObjetivo(lenguajeDeProgramacion) {
+    return " mi objetivo actual es saber programar en " + lenguajeDeProgramacion;
+}
+var objetivoActual=retornarObjetivo("JavaScript");
+console.log(objetivoActual);
 
 </script>
