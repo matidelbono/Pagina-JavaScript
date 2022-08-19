@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <script>
-function proximoEnLaFila(arreglo, elemento) { 
-    arreglo.push(elemento);
-    return arreglo.shift();
-}
-var miArreglo=[46,63,20,41,12];
-console.log (" Antes :" + JSON.stringify(miArreglo));
-console.log(proximoEnLaFila(miArreglo, 23));
-console.log (" Despues :" + JSON.stringify(miArreglo));
+// valores booleanos
+console.log(false);
+// operador de igualdad
+console.log(5 == 6);
+//console.log("Hola" == "JavaScript");
+//console.log([1, 2, 3]== [1, 2, 3]); // no comparar arreglos
+// operador de igualdad estricta
+//console.log(9===9); // compara el tipo de datos
+//console.log(9==="9");
+var a;
+var b;
+a=5;
+b=5;
+console.log(a==b);
+//console.log(a===b);
+b=8;
+//console.log(a==b);
+//console.log(a===b);
+b="5";
+//console.log(a==b);
+console.log(a===b);
+// Operador de desigualdad
+console.log(9 != 6);
+//console.log (9 != 9);
+//console.log("JavaScript" != "Python");
+console.log([1, 2, 3] != [1, 2, 3]); // compara su representacion en memoria
+// Operador de desigualdad estricta
+console.log(1 !== "1");
+// Operador "mayor"
+console.log(6 > 5);
+//console.log(3 > 10);
+console.log("Matias" > "Omar");
+var a =15;
+var b=11;
+console.log(a > b) ;
 
 </script>
