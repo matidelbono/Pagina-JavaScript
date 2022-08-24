@@ -1,66 +1,22 @@
 <!DOCTYPE html>
 <script>
-// Sentencias condicionales
-var M=3;
-if(M > 2 && M < 11) {
-    console.log("La condicion es verdadera");
-    } 
-var estacion="Verano" 
-if (estacion=="Invierno") {
-    console.log("Que lindo! Hace Frio!");
-}
-console.log("No hace demasiado frio");
-// Clausula "else"
-var G=5;
-if (G < 2 ) {
-    console.log ("La condicion es verdadera")
-} else {
-    console.log("La condicion es falsa");
-}
-var estacion="Primavera";
-if (estacion=="Verano") {
-    Console.log ("En poco tiempo comienza el calor")
-} else {
-    console.log("Ojala falte mucho para el comienzo del calor");
-}
-// Clausula "else if"
-function clasificarValor(valor) {
-    if(valor % 2 ==0) {
-        console.log(+ valor, " es divisible por 2 ")
-} else if (valor % 3==0) {
-   console.log (+ valor , "es divisible por 3")
-}
-else {
-    console.log(+ valor , "no es divisible por ninguna de las opciones")
-} 
-}
-clasificarValor (16);
-clasificarValor (39);
-clasificarValor(61);
-// orden logico de los condicionales
-function clasificarValores(valor) {
-    if (valor < 5)  {
-        console.log (+ valor , "es menor que 5");
-} else if(valor < 10) {
-    console.log (+ valor , "es menor que 10");
-} else {
-    console.log(+ valor , "es mayor o igual que 10");
-}
-}
-clasificarValores(3); // solo se ejecuta la sentencia relativa a la primera condicion verdadera
-clasificarValores(20);
-// encadenamiento sentencias "else if"
-function InterpretarIMC(Indice) {
-    if (Indice < 18.5) {
-        console.log("Bajo peso");
-    } else if (Indice <= 24.9) {
-        console.log("Peso normal");
-    } else if (Indice <= 29.9) {
-        console.log ("Sobrepeso");
+function RetornarPuntaje(par, golpes) {
+    if (golpes ==1) {
+        return "hole-in-one";
+    } else if(golpes <= par-2) {
+        return "Eagle";
+    } else if ( golpes == par-1) {
+        return "Birdie";
     }
-    else {
-        console.log("Obeso");
-    } 
+    else if (golpes == par) {
+        return "Par";
+    } else if (golpes== par+1) {
+        return "Bogey";
+    } else if (golpes== par+2) {
+        return "Double Bogey";
+    } else  {
+        return "go Home"
+    }
 }
-InterpretarIMC(31.7);
+console.log(RetornarPuntaje(5,9));
 </script>
