@@ -19,4 +19,55 @@ function clasificarValor(valor) {
 return respuesta;
 }
 console.log(clasificarValor(4))
+var producto="helado";
+switch (producto) {
+    case "pizza":
+        console.log("La pizza napolitana cuesta $ 550");
+        break;
+    case "hamburguesa":
+        console.log("la hamburguesa especial cuesta $ 445");
+        break;
+    case "helado":
+        console.log("el kilo de helado cuesta $ 1250");
+        break;
+    } 
+    // Opcion predeterminada
+    function seleccionarIdioma(valor) {
+    var Idioma;
+    switch (valor) {
+    case 1: Idioma="Español";
+    break;
+    case 2: Idioma="Frances";
+    break;
+    case 3: Idioma="Italiano";
+    break;
+    default: Idioma="Ingles";
+    break;
+} 
+return Idioma;
+}
+
+console.log(seleccionarIdioma(4)); 
+// Multiples casos
+function clasificarVolumen(valor) {
+    var volumen;
+    switch (valor) {
+        case 1:
+            volumen="bajo"
+            break;
+        case 2:
+        case 3:
+            volumen="intermedio";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            volumen="alto";
+            break;
+}
+return volumen;
+    } 
+    console.log(clasificarVolumen(4));
+    
+    
 </script>
