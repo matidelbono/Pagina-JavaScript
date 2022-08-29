@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <script>
-// retorno valores booleanos en funciones
-function esMenorQue(a,b) {
-    return a < b;
+// Blackjack - Conteo de cartas
+var conteo=0;
+function conteoDeCartas(carta) {
+    var decision;
+    switch (carta) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            conteo++;
+            break;
+        case 7:
+        case 8:
+        case 9:
+            conteo+=0;
+            break;
+        case 10:
+        case "J":
+        case "Q":
+        case "K":
+        case "A":
+            conteo--
+            break;
+    }
+    if (conteo>0) {
+        decision=  "Apostar";
+    }
+    else {
+        decision="Esperar";
+    }
+    return conteo + " " +  decision;
 }
-console.log(esMenorQue(6,5));
-// patron de retorno anticipado
-function calcularRaizCuadrada(numero) {
-if (numero < 0) {
-    return undefined;
-}
-return Math.sqrt(numero);
-}
-console.log(calcularRaizCuadrada(-5));
+console.log(conteoDeCartas("K"));
 </script>
