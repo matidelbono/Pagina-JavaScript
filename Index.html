@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <script>
-// Blackjack - Conteo de cartas
-var conteo=0;
-function conteoDeCartas(carta) {
-    var decision;
-    switch (carta) {
-        case 2:
-        case 3:
-        case 4:
-        case 5:
-        case 6:
-            conteo++;
-            break;
-        case 7:
-        case 8:
-        case 9:
-            conteo+=0;
-            break;
-        case 10:
-        case "J":
-        case "Q":
-        case "K":
-        case "A":
-            conteo--
-            break;
-    }
-    if (conteo>0) {
-        decision=  "Apostar";
-    }
-    else {
-        decision="Esperar";
-    }
-    return conteo + " " +  decision;
+// Objetos
+var miGato= {
+    "Nombre":"Luly",
+    "edad": 2,
+    "peso": 3,
+    "raza": "mixta"
+};
+// Acceso a propiedades (notacion de punto)
+console.log(miGato.raza);
+// Acceso a propiedades (notacion de corchetes)
+var miCuaderno= {
+    "color": "naranja",
+    "categoria": 3,
+    "numero de paginas":200,
+    "numero de hojas": 100,
 }
-console.log(conteoDeCartas("K"));
-console.log(conteoDeCartas(2));
-console.log(conteoDeCartas(3));
-
+console.log(miCuaderno ["numero de paginas"]);
+// Acceso a propiedades ( variables)
+var resultados = {
+    1:"Mati3100",
+    2:"Gaby2056",
+    3:"Omar1761",
+    4:"Lito1454",
+};
+var posicionFinal=3;
+console.log(resultados[posicionFinal]);
+//Actualizacion de propiedades
+var mochila= {
+    "color": "verde",
+    "tamano": "mediano",
+    "contenido": ["botella de agua" , "cuaderno", "cartuchera"]
+}  
+console.log(mochila.color);
+mochila.color="azul";
+console.log(mochila.color);
+console.log(mochila.contenido);
+mochila.contenido.push("compas");
+console.log(mochila.contenido);
 </script>
