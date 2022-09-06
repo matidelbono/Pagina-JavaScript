@@ -38,4 +38,44 @@ console.log(mochila.color);
 console.log(mochila.contenido);
 mochila.contenido.push("compas");
 console.log(mochila.contenido);
+// Adicion de propiedades
+var curso= {
+    "titulo": "Aprendamos JavaScript desde cero",
+    "idioma": "espanol",
+    "duracion": 30
+} 
+curso.seguidores = 34500;
+//console.log(curso.seguidores);
+// Eliminacion de propiedades
+delete curso.idioma;
+console.log(curso);
+// Objetos para busquedas
+function buscarElementoQuimico(simbolo) {
+    var simbolosQuimicos= {
+        "Al": "Aluminio",
+        "S": "Azufre",
+        "Cl": "Cloro",
+        "He": "Helio",
+        "B" : "Boro",
+        "Li": "Litio"
+    };
+    return simbolosQuimicos[simbolo];
+}
+console.log(buscarElementoQuimico("Li"));
+// Verificar propiedades
+
+function verificarPropiedad(obj, propiedad) {
+   
+    if(obj.hasOwnProperty(propiedad)) {
+        return " propiedad : "  + obj[propiedad];
+    } else {
+        return ("el objeto no posee la propiedad indicada");
+    }
+}
+var miLibro = {
+    "color": "rojo",
+    "paginas": 378,
+    "precio": 2150
+};
+console.log(verificarPropiedad(miLibro, "paginas"));
 </script>
