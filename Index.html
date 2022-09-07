@@ -1,81 +1,57 @@
 <!DOCTYPE html>
 <script>
-// Objetos
-var miGato= {
-    "Nombre":"Luly",
-    "edad": 2,
-    "peso": 3,
-    "raza": "mixta"
-};
-// Acceso a propiedades (notacion de punto)
-console.log(miGato.raza);
-// Acceso a propiedades (notacion de corchetes)
-var miCuaderno= {
-    "color": "naranja",
-    "categoria": 3,
-    "numero de paginas":200,
-    "numero de hojas": 100,
-}
-console.log(miCuaderno ["numero de paginas"]);
-// Acceso a propiedades ( variables)
-var resultados = {
-    1:"Mati3100",
-    2:"Gaby2056",
-    3:"Omar1761",
-    4:"Lito1454",
-};
-var posicionFinal=3;
-console.log(resultados[posicionFinal]);
-//Actualizacion de propiedades
-var mochila= {
-    "color": "verde",
-    "tamano": "mediano",
-    "contenido": ["botella de agua" , "cuaderno", "cartuchera"]
-}  
-console.log(mochila.color);
-mochila.color="azul";
-console.log(mochila.color);
-console.log(mochila.contenido);
-mochila.contenido.push("compas");
-console.log(mochila.contenido);
-// Adicion de propiedades
-var curso= {
-    "titulo": "Aprendamos JavaScript desde cero",
-    "idioma": "espanol",
-    "duracion": 30
-} 
-curso.seguidores = 34500;
-//console.log(curso.seguidores);
-// Eliminacion de propiedades
-delete curso.idioma;
-console.log(curso);
-// Objetos para busquedas
-function buscarElementoQuimico(simbolo) {
-    var simbolosQuimicos= {
-        "Al": "Aluminio",
-        "S": "Azufre",
-        "Cl": "Cloro",
-        "He": "Helio",
-        "B" : "Boro",
-        "Li": "Litio"
-    };
-    return simbolosQuimicos[simbolo];
-}
-console.log(buscarElementoQuimico("Li"));
-// Verificar propiedades
+// Objetos complejos
+var ordenesDePizzas = [
+{
+    "tipo" : "Pagnottella",
+    "tamano": "individual",
+    "precio" : 885,
+    "toppings": [
+        "extra queso",
+        "mas berenjenas",
 
-function verificarPropiedad(obj, propiedad) {
-   
-    if(obj.hasOwnProperty(propiedad)) {
-        return " propiedad : "  + obj[propiedad];
-    } else {
-        return ("el objeto no posee la propiedad indicada");
-    }
+    ],
+    "paraLlevar": true
+},
+{
+    "tipo" : "Cuatro Quesos",
+    "tamano" : "Familia",
+    "precio" : 950,
+    "toppings": [
+        "extra queso",
+        "pimenton",
+    ],
+    "paraLlevar": false,
+},
+{
+    "tipo":"Napoli",
+    "tamano": "individual",
+    "precio": 920,
+    "toppings": [],
+    "paraLlevar": true,
 }
-var miLibro = {
-    "color": "rojo",
-    "paginas": 378,
-    "precio": 2150
+];
+console.log(ordenesDePizzas[1].toppings);
+// Objetos anidados
+var miReceta ={
+    "descripcion": "El mejor postre",
+    "costo": 750,
+    "ingredientes": {
+        "masa": {
+            "harina": "100 grs.",
+            "sal": "1 cucharada",
+            "agua": "1 taza y 1/2"
+        } ,
+        "cobertura" : {
+            "azucar": "100 grs.",
+            "chocolate": "300 grs.",
+            "manteca": "150 grs."
+         }
+}
+
 };
-console.log(verificarPropiedad(miLibro, "paginas"));
+console.log(miReceta.ingredientes);
+console.log(miReceta.ingredientes.cobertura.azucar);
+console.log(miReceta.ingredientes.cobertura.chocolate);
+console.log(miReceta.ingredientes.cobertura.manteca);
 </script>
