@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <script>
-// actualizacion albumes
-var coleccionDeDiscos = {
-    7568:{
-        tituloAlbum:"Sin mirar atras",
-        artista:"David Bisbal",
-        canciones: "El Ruido"
-    },
-    5673: {
-        tituloAlbum:"A solas con Chayanne"
-    }
-};
-function actualizarDiscos (discos,id,propiedad,valor) {
-    if(valor=="") {
-        delete discos[id] [propiedad];
-    } else if (propiedad=="canciones" ) {
-        discos[id] [propiedad]=[discos [id] [propiedad] || []];
-       discos [id] [propiedad].push(valor)
-    } else {
-        discos [id][propiedad]=valor;
-        } 
-
-    } 
-
-console.log(coleccionDeDiscos [5673].artista);
-actualizarDiscos(coleccionDeDiscos, 5673, "artista", "Chayanne");
-console.log(coleccionDeDiscos[5673].artista);
+// Ciclo while
+var miArreglo=[];
+var i=0;
+while (i<10) {
+    miArreglo.push(i);
+    i++;
+}
+console.log(miArreglo);
+var numeros=[3,11,17,20,61,63, 54, 90];
+while (numeros.length > 4)
+{
+    numeros.pop();
+}
+console.log(numeros);
+// Ciclo for
+var otroArreglo=[]
+i=0;
+for (var i=0; i<10;  i=i+3  ) {
+    otroArreglo.push(i);
+}
+console.log(otroArreglo);
+// Ejemplo numeros impares 
+var arregloImpares=[];
+i=1;
+for (var i=1; i<20 ; i+=2) {
+    arregloImpares.push(i);
+}
+console.log(arregloImpares);
+// Ejemplo contar hacia atras
+for (var i=15; i>=10; i--) {
+console.log(i);
+}
+var tercerArreglo=[];
+for(var i=10; i>=0; i-=2) {
+    tercerArreglo.push(i);
+}
+console.log(tercerArreglo);
 </script>
