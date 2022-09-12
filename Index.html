@@ -13,21 +13,17 @@ var coleccionDeDiscos = {
 };
 function actualizarDiscos (discos,id,propiedad,valor) {
     if(valor=="") {
-        delete discos.id.propiedad;
+        delete discos[id] [propiedad];
     } else if (propiedad=="canciones" ) {
-        discos.id.propiedad=[discos.id.propiedad] || [];
-       discos.id.propiedad.push(valor)
+        discos[id] [propiedad]=[discos [id] [propiedad] || []];
+       discos [id] [propiedad].push(valor)
     } else {
-        if (discos.hasOwnProperty(propiedad)) {
-            discos.id.propiedad=valor;
-        }
-        else {
-            discos.id.propiedad=valor;
+        discos [id][propiedad]=valor;
         } 
 
     } 
-}
-console.log(coleccionDeDiscos [7568].tituloAlbum);
-actualizarDiscos(coleccionDeDiscos, 7568, "tituloAlbum", "")
-console.log(coleccionDeDiscos[7568].tituloAlbum);
+
+console.log(coleccionDeDiscos [5673].artista);
+actualizarDiscos(coleccionDeDiscos, 5673, "artista", "Chayanne");
+console.log(coleccionDeDiscos[5673].artista);
 </script>
