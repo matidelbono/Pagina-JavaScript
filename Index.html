@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <script>
-var misPlantas = [
-{
-    tipo: "flores",
-    lista: [
-        "rosas",
-        "tulipanes",
-        "geranios"
-    ]
-}, 
-{
-    tipo: "arboles",
-    lista: [
-    "limonero",
-    "abeto",
-    "pino"
-    ]
-}, 
-];
-var primeraFlor= misPlantas[0].lista[0];
-var segundoArbol=misPlantas[1].lista[1];
-console.log(primeraFlor);
-console.log(segundoArbol);
+// actualizacion albumes
+var coleccionDeDiscos = {
+    7568:{
+        tituloAlbum:"Sin mirar atras",
+        artista:"David Bisbal",
+        canciones: "El Ruido"
+    },
+    5673: {
+        tituloAlbum:"A solas con Chayanne"
+    }
+};
+function actualizarDiscos (discos,id,propiedad,valor) {
+    if(valor=="") {
+        delete discos.id.propiedad;
+    } else if (propiedad=="canciones" ) {
+        discos.id.propiedad=[discos.id.propiedad] || [];
+       discos.id.propiedad.push(valor)
+    } else {
+        if (discos.hasOwnProperty(propiedad)) {
+            discos.id.propiedad=valor;
+        }
+        else {
+            discos.id.propiedad=valor;
+        } 
 
+    } 
+}
+console.log(coleccionDeDiscos [7568].tituloAlbum);
+actualizarDiscos(coleccionDeDiscos, 7568, "tituloAlbum", "")
+console.log(coleccionDeDiscos[7568].tituloAlbum);
 </script>
