@@ -1,57 +1,26 @@
 <!DOCTYPE html>
 <script>
-// Objetos complejos
-var ordenesDePizzas = [
+var misPlantas = [
 {
-    "tipo" : "Pagnottella",
-    "tamano": "individual",
-    "precio" : 885,
-    "toppings": [
-        "extra queso",
-        "mas berenjenas",
-
-    ],
-    "paraLlevar": true
-},
+    tipo: "flores",
+    lista: [
+        "rosas",
+        "tulipanes",
+        "geranios"
+    ]
+}, 
 {
-    "tipo" : "Cuatro Quesos",
-    "tamano" : "Familia",
-    "precio" : 950,
-    "toppings": [
-        "extra queso",
-        "pimenton",
-    ],
-    "paraLlevar": false,
-},
-{
-    "tipo":"Napoli",
-    "tamano": "individual",
-    "precio": 920,
-    "toppings": [],
-    "paraLlevar": true,
-}
+    tipo: "arboles",
+    lista: [
+    "limonero",
+    "abeto",
+    "pino"
+    ]
+}, 
 ];
-console.log(ordenesDePizzas[1].toppings);
-// Objetos anidados
-var miReceta ={
-    "descripcion": "El mejor postre",
-    "costo": 750,
-    "ingredientes": {
-        "masa": {
-            "harina": "100 grs.",
-            "sal": "1 cucharada",
-            "agua": "1 taza y 1/2"
-        } ,
-        "cobertura" : {
-            "azucar": "100 grs.",
-            "chocolate": "300 grs.",
-            "manteca": "150 grs."
-         }
-}
+var primeraFlor= misPlantas[0].lista[0];
+var segundoArbol=misPlantas[1].lista[1];
+console.log(primeraFlor);
+console.log(segundoArbol);
 
-};
-console.log(miReceta.ingredientes);
-console.log(miReceta.ingredientes.cobertura.azucar);
-console.log(miReceta.ingredientes.cobertura.chocolate);
-console.log(miReceta.ingredientes.cobertura.manteca);
 </script>
