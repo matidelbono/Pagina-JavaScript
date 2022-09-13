@@ -1,51 +1,24 @@
 <!DOCTYPE html>
 <script>
-// Ciclo while
-var miArreglo=[];
-var i=0;
-while (i<10) {
-    miArreglo.push(i);
-    i++;
+function contarNumerosPares(arreglo) {
+    total=0;
+    for (i=0; i< arreglo.length; i++) {
+        if(arreglo[i] % 2==0) {
+            total++;
+        }
+    }
+    return total;
 }
-console.log(miArreglo);
-var numeros=[3,11,17,20,61,63, 54, 90];
-while (numeros.length > 4)
-{
-    numeros.pop();
+console.log(contarNumerosPares([14,17,20]))
+// Ciclos for anidados
+var miArreglo=[[1,2,3], [4,5,6],[7,8,9]];
+for(i=0; i< miArreglo.length; i++){
+    var arregloAnidado=(miArreglo[i]);
+    console.log (" arreglo " + arregloAnidado)
+    for (j=0; j<arregloAnidado.length; j++) {
+        console.log("elemento " + (j+1))
+        console.log(arregloAnidado[j])
+    } 
 }
-console.log(numeros);
-// Ciclo for
-var otroArreglo=[]
-i=0;
-for (var i=0; i<10;  i=i+3  ) {
-    otroArreglo.push(i);
-}
-console.log(otroArreglo);
-// Ejemplo numeros impares 
-var arregloImpares=[];
-i=1;
-for (var i=1; i<20 ; i+=2) {
-    arregloImpares.push(i);
-}
-console.log(arregloImpares);
-// Ejemplo contar hacia atras
-for (var i=15; i>=10; i--) {
-console.log(i);
-}
-var tercerArreglo=[];
-for(var i=10; i>=0; i-=2) {
-    tercerArreglo.push(i);
-}
-console.log(tercerArreglo);
-// iteracion sobre arreglos
-var arregloParaIterar=[3,7,8,4];
-var total=0;
-for(i=0; i<=3; i++) {
-    total +=arregloParaIterar[i];
-}
-console.log(total);
-var lenguajes=["JavaScript", "Python", "Java", "C#"]
-for (i=0; i< lenguajes.length; i++) {
-    console.log(lenguajes[i].toUpperCase());
-}
+
 </script>
