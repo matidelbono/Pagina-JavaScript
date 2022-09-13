@@ -1,24 +1,10 @@
 <!DOCTYPE html>
 <script>
-function contarNumerosPares(arreglo) {
-    total=0;
-    for (i=0; i< arreglo.length; i++) {
-        if(arreglo[i] % 2==0) {
-            total++;
-        }
-    }
-    return total;
-}
-console.log(contarNumerosPares([14,17,20]))
-// Ciclos for anidados
-var miArreglo=[[1,2,3], [4,5,6],[7,8,9]];
-for(i=0; i< miArreglo.length; i++){
-    var arregloAnidado=(miArreglo[i]);
-    console.log (" arreglo " + arregloAnidado)
-    for (j=0; j<arregloAnidado.length; j++) {
-        console.log("elemento " + (j+1))
-        console.log(arregloAnidado[j])
-    } 
-}
+// Ciclos do..While
+var x=5;
+do {
+    console.log(x);
+    x++;
+} while (x<=10)
 
 </script>
