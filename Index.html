@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <script>
 // Generacion de numeros aleatorios
-console.log(Math.random());
-console.log(Math.random());
-console.log(Math.random());
-console.log(Math.random());
+var numeroAleatorio=Math.random();
+//console.log(numeroAleatorio);
+// Numeros aleatorios enteros
+var numeroAleatorioEntre0y19=Math.floor(Math.random() *19); // floor trunca la parte decimal
+//console.log(numeroAleatorioEntre0y19);
+function generarEnteroAleatorio(limiteSuperior){
+    return(Math.floor(Math.random() * limiteSuperior));
+}
+for (i=0; i<5; i++) {
+//console.log(generarEnteroAleatorio(15));
+}
+// Numeros enteros aleatorios en un rango
+function rangoAleatorio(limiteInferior, limiteSuperior) {
+    return Math.floor(Math.random() * (limiteSuperior-limiteInferior+1)) + limiteInferior;
+}
+for(i=0; i<5; i++) {
+console.log(rangoAleatorio(3,8));
+}
+// Funcion ParseInt
+console.log(parseInt("-47"));
 </script>
