@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <script>
-// Ciclos do..While
-var x=16;
-do {
-    console.log(x);
-    x++;
-} while (x<=10) // se necesita que el usuario ingrese un valor
+// proyecto busqueda de perfil
+var contactos= [
+{ 
+    "nombre": "Gabriela",
+    "Apellido" : "Rossowski",
+    "numero" : "306856",
+    "gustos" : ["Animales", "cocina"]
+},
+{ 
+    "nombre": "Omar",
+    "Apellido" : "Delbono",
+    "numero" : "306289",
+    "gustos" : ["Jardineria", "informatica"]
+},
+{
+    "nombre": "Eduardo",
+    "Apellido" : "Muriel",
+    "numero" : "613308",
+    "gustos" : ["Futbol", "viajes"]
+}
 
+
+];
+
+function buscarPerfil(nombre, propiedad) {
+    for(var i=0; i< contactos.length; i++) {
+        if(contactos[i].nombre ==nombre) {
+            return contactos[i] [propiedad] || "La propiedad requerida no existe";
+    }
+}
+}
+console.log(buscarPerfil("Eduardo", "Apellido"));
 </script>
