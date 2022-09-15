@@ -1,35 +1,8 @@
 <!DOCTYPE html>
 <script>
-// proyecto busqueda de perfil
-var contactos= [
-{ 
-    "nombre": "Gabriela",
-    "Apellido" : "Rossowski",
-    "numero" : "306856",
-    "gustos" : ["Animales", "cocina"]
-},
-{ 
-    "nombre": "Omar",
-    "Apellido" : "Delbono",
-    "numero" : "306289",
-    "gustos" : ["Jardineria", "informatica"]
-},
-{
-    "nombre": "Eduardo",
-    "Apellido" : "Muriel",
-    "numero" : "613308",
-    "gustos" : ["Futbol", "viajes"]
-}
-
-
-];
-
-function buscarPerfil(nombre, propiedad) {
-    for(var i=0; i< contactos.length; i++) {
-        if(contactos[i].nombre ==nombre) {
-            return contactos[i] [propiedad] || "La propiedad requerida no existe";
-    }
-}
-}
-console.log(buscarPerfil("Eduardo", "Apellido"));
+// Generacion de numeros aleatorios
+console.log(Math.random());
+console.log(Math.random());
+console.log(Math.random());
+console.log(Math.random());
 </script>
