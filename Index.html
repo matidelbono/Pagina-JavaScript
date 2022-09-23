@@ -20,5 +20,26 @@ for(i=0; i<5; i++) {
 console.log(rangoAleatorio(3,8));
 }
 // Funcion ParseInt
-console.log(parseInt("-47"));
+console.log(parseInt("6.7"));
+var a=parseInt("17");
+var b=parseInt("20");
+console.log(a + b);
+// Funcion ParseInt con base
+console.log(parseInt("30EA",16));
+// Operador Ternario
+function retornarMinimo(x,y) { 
+    return x < y ? x : y;
+   }
+   console.log(retornarMinimo(3,17));
+function retornarMaximo(i,j) { 
+    return i>j ? i+2:j *3;
+}
+console.log(retornarMaximo(63,61));
+// Multiples Operadores condicionales
+function compararNumeros(a,b) {
+return a == b ? "a y b son iguales" 
+    : a > b ? " a es mayor que b" 
+    : " a es menor que b "
+}
+console.log(compararNumeros(20,20));
 </script>
