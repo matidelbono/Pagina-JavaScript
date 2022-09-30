@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <script>
-// Generacion de numeros aleatorios
-var numeroAleatorio=Math.random();
-//console.log(numeroAleatorio);
-// Numeros aleatorios enteros
-var numeroAleatorioEntre0y19=Math.floor(Math.random() *19); // floor trunca la parte decimal
-//console.log(numeroAleatorioEntre0y19);
-function generarEnteroAleatorio(limiteSuperior){
-    return(Math.floor(Math.random() * limiteSuperior));
+// var VS let
+let piloto="Pecco";
+ piloto="Fabio";
+console.log(piloto);
+// no se puede declarar mas veces una variable con "let";
+// Ambitos(var VS let)
+var miVariableGlobal= 4;
+console.log(miVariableGlobal);
+function miFuncion() {
+    console.log(miVariableGlobal)
+    var miVariableLocal=11;
+    console.log(miVariableLocal);
 }
-for (i=0; i<5; i++) {
-//console.log(generarEnteroAleatorio(15));
+//console.log(miVariableLocal) Error
+miFuncion();
+for(var i=0; i<3; i++) {
+    console.log(i);
 }
-// Numeros enteros aleatorios en un rango
-function rangoAleatorio(limiteInferior, limiteSuperior) {
-    return Math.floor(Math.random() * (limiteSuperior-limiteInferior+1)) + limiteInferior;
+var mostrarColor=true;
+if (mostrarColor) {
+    let color="naranja";
+    console.log("mi color favorito es el " + color)
 }
-for(i=0; i<5; i++) {
-console.log(rangoAleatorio(3,8));
+// Let es util si se desea hacer referencia a variables locales
+// const
+const miConstante=63;
+console.log(miConstante);
+function calcularAreaCirculo(radio) {
+    const PI=3.14;
+    if (radio <0) {
+        return undefined
+    }  else {
+        return PI*(radio ** 2)
 }
-// Funcion ParseInt
-console.log(parseInt("6.7"));
-var a=parseInt("17");
-var b=parseInt("20");
-console.log(a + b);
-// Funcion ParseInt con base
-console.log(parseInt("30EA",16));
-// Operador Ternario
-function retornarMinimo(x,y) { 
-    return x < y ? x : y;
-   }
-   console.log(retornarMinimo(3,17));
-function retornarMaximo(i,j) { 
-    return i>j ? i+2:j *3;
 }
-console.log(retornarMaximo(63,61));
-// Multiples Operadores condicionales
-function compararNumeros(a,b) {
-return a == b ? "a y b son iguales" 
-    : a > b ? " a es mayor que b" 
-    : " a es menor que b "
-}
-console.log(compararNumeros(20,20));
+console.log(calcularAreaCirculo(10));
+// Mutar arreglo declarado
+const MI_ARREGLO=[1,2,3,4];
+MI_ARREGLO[0]= 5;
+MI_ARREGLO[1]= 6;
+MI_ARREGLO[2]= 7;
+MI_ARREGLO[3]= 8;
+console.log(MI_ARREGLO);
+
+let colores= {
+"verde": "#10e04b",
+"azul": "#1b50e0",
+"Negro": "#000000",
+"Blanco": "#ffffff"
+};
+
+Object.freeze(colores);
+delete colores.verde;
 </script>
