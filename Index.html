@@ -1,56 +1,26 @@
 <!DOCTYPE html>
 <script>
-// var VS let
-let piloto="Pecco";
- piloto="Fabio";
-console.log(piloto);
-// no se puede declarar mas veces una variable con "let";
-// Ambitos(var VS let)
-var miVariableGlobal= 4;
-console.log(miVariableGlobal);
-function miFuncion() {
-    console.log(miVariableGlobal)
-    var miVariableLocal=11;
-    console.log(miVariableLocal);
+// Funciones Flecha: son utiles si se deben pasar funciones como parametro
+const fecha= () =>  new Date();
+// Parametros
+const sumarTres= (x) => x+3;
+ console.log(sumarTres(11));
+ const concatenarArreglos= (arr1, arr2) => arr1.concat(arr2);
+ console.log(concatenarArreglos([3,11], [17,4]));
+ const sumar = (a,b) => {
+    let num = 6;
+    return a + b + num;
+};
+console.log(sumar(3,11));
+// Parametros : Valores por defecto
+const incrementar=(num, valorIncremento = 1) => num + valorIncremento;
+console.log(incrementar(17, 4));
+// Operador rest
+function miFuncion(...args) {
+    console.log(args.length)
 }
-//console.log(miVariableLocal) Error
-miFuncion();
-for(var i=0; i<3; i++) {
-    console.log(i);
-}
-var mostrarColor=true;
-if (mostrarColor) {
-    let color="naranja";
-    console.log("mi color favorito es el " + color)
-}
-// Let es util si se desea hacer referencia a variables locales
-// const
-const miConstante=63;
-console.log(miConstante);
-function calcularAreaCirculo(radio) {
-    const PI=3.14;
-    if (radio <0) {
-        return undefined
-    }  else {
-        return PI*(radio ** 2)
-}
-}
-console.log(calcularAreaCirculo(10));
-// Mutar arreglo declarado
-const MI_ARREGLO=[1,2,3,4];
-MI_ARREGLO[0]= 5;
-MI_ARREGLO[1]= 6;
-MI_ARREGLO[2]= 7;
-MI_ARREGLO[3]= 8;
-console.log(MI_ARREGLO);
-
-let colores= {
-"verde": "#10e04b",
-"azul": "#1b50e0",
-"Negro": "#000000",
-"Blanco": "#ffffff"
+(miFuncion([1,2,3] , [4,5,6]));
+const restar=(...args) => {
+    return args.reduce(x, y => x-y, 0)
 };
 
-Object.freeze(colores);
-delete colores.verde;
-</script>
