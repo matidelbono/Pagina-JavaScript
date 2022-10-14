@@ -23,4 +23,11 @@ function miFuncion(...args) {
 const restar=(...args) => {
     return args.reduce(x, y => x-y, 0)
 };
+// Operador Spread
+const numeros= [1,2,3];
+function sumarNumeros (x, y, z) {
+    return x + y + z;
+}
 
+console.log((sumarNumeros(...numeros)));
+</script >
