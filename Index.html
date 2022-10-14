@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <script>
-// Funciones Flecha: son utiles si se deben pasar funciones como parametro
-const fecha= () =>  new Date();
-// Parametros
-const sumarTres= (x) => x+3;
- console.log(sumarTres(11));
- const concatenarArreglos= (arr1, arr2) => arr1.concat(arr2);
- console.log(concatenarArreglos([3,11], [17,4]));
- const sumar = (a,b) => {
-    let num = 6;
-    return a + b + num;
+// Sintaxis de Desestructuracion
+const Usuario= {
+    nombre: "Eduardo Muriel",
+    edad: 68
 };
-console.log(sumar(3,11));
-// Parametros : Valores por defecto
-const incrementar=(num, valorIncremento = 1) => num + valorIncremento;
-console.log(incrementar(17, 4));
-// Operador rest
-function miFuncion(...args) {
-    console.log(args.length)
-}
-(miFuncion([1,2,3] , [4,5,6]));
-const restar=(...args) => {
-    return args.reduce(x, y => x-y, 0)
+const {nombre,edad}=Usuario;
+const Coordenadas= {
+    x: 3,
+    y:11,
+    z:20
 };
-// Operador Spread
-const numeros= [1,2,3];
-function sumarNumeros (x, y, z) {
-    return x + y + z;
-}
+const {x, y, z}=Coordenadas;
+console.log(x)
+console.log(y)
+console.log(z)
+// Sintaxis con Objetos Anidados
+const usuarioPortal = {
+    matiDel: {
+        edadUsuario:21,
+        correoUsuario: "mati.delbono@hotmail.com"
+    }
+};
+const {matiDel:{edadUsuario,correoUsuario }}=usuarioPortal;
+console.log(edadUsuario);
+console.log(correoUsuario)
+const PRONOSTICO_LOCAL= {
+    "ayer": {
+        minima: 11,
+        maxima:26
+    },
+    "hoy": {
+        minima:9,
+        maxima:24
+    },
+    "manana" : {
+        minima:12,
+        maxima:27
+    },
 
-console.log((sumarNumeros(...numeros)));
+}
+const {ayer:{minima:minimaAyer, maxima:maximaAyer}}=PRONOSTICO_LOCAL;
+console.log(minimaAyer,maximaAyer);
+// Sintaxis con Arreglos
+// Ejemplo de asignacion
+var a;
+var b;
+[a,b,,,c]=[1,2,3,4,5,6]
+console.log(a,b,c);
+// Desestructuracion para intercambio
+var a=4;
+var b=11;
+[b, a] = [a, b]
+console.log(" a: " + a + " " + "b: " +  b);
+// Desestructuracion con operador Rest
 </script >
