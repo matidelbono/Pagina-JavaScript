@@ -1,95 +1,20 @@
 <!DOCTYPE html>
 <script>
-// Sintaxis de Desestructuracion
-const Usuario= {
-    nombre: "Eduardo Muriel",
-    edad: 68
-};
-const {nombre,edad}=Usuario;
-const Coordenadas= {
-    x: 3,
-    y:11,
-    z:20
-};
-const {x, y, z}=Coordenadas;
-console.log(x)
-console.log(y)
-console.log(z)
-// Sintaxis con Objetos Anidados
-const usuarioPortal = {
-    matiDel: {
-        edadUsuario:21,
-        correoUsuario: "mati.delbono@hotmail.com"
-    }
-};
-const {matiDel:{edadUsuario,correoUsuario }}=usuarioPortal;
-console.log(edadUsuario);
-console.log(correoUsuario)
-const PRONOSTICO_LOCAL= {
-    "ayer": {
-        minima: 11,
-        maxima:26
-    },
-    "hoy": {
-        minima:9,
-        maxima:24
-    },
-    "manana" : {
-        minima:12,
-        maxima:27
-    },
-
-}
-const {ayer:{minima:minimaAyer, maxima:maximaAyer}}=PRONOSTICO_LOCAL;
-console.log(minimaAyer,maximaAyer);
-// Sintaxis con Arreglos
-// Ejemplo de asignacion
-var a;
-var b;
-var c;
-[a,b,,,,c]=[1,2,3,4,5,6]
-console.log(a,b,c);
-// Desestructuracion para intercambio
-var a=3;
-var b=20;
-[b, a] = [a, b]
-console.log(" a: " + a + " " + "b: " +  b);
-// Desestructuracion con operador Rest
-var a;
-var b;
-var arr;
-[a,b,...arr]=[1,2,3,4,5,6,7]
-console.log(a);
-console.log(b);
-console.log(arr);
-const arregloInicial=[1,2,3,4,5,6,7,8]
-function removerTresPrimerosElementos(arreglo){
-    const [, , ,... nuevoArreglo]=arreglo;
-    return nuevoArreglo;
-}
-    console.log( arregloNuevo=removerTresPrimerosElementos(arregloInicial));
-    // Desestructuracion pasando objetos como argumentos
-    //1)
-     var nuevoPerfilCliente= {
-        nombre:"Matias Delbono",
-        edad: 22,
-        nacionalidad:"Italiana",
-        ubicacion:"Argentina"
-    }
-    const actualizarPerfil=({nombre,edad}) => {
-       console.log(nombre);
-       console.log(edad)
-};
-actualizarPerfil(nuevoPerfilCliente);
-//2)
-var estadisticas={
-    max:56.78,
-    desviacionEstandar:4.34,
-    mediana:34.54,
-    moda:23.87,
-    min: -0.75,
-    promedio:35.85
-};
-const puntoMedio=({max,min}) => (max + min) /2.0
-console.log(puntoMedio(estadisticas));
+//Plantillas Literales
+//1) Se utiliza el backtick(acento invertido) en vez de las comillas
+//2) pueden contener comillas simples y dobles
+//3) las lineas se preservan como se escriben en el codigo
+var a=7;
+console.log(`el valor de a es ${a}`);
+var Nombre="Matias";
+var edad=22;
+console.log(`Mi nombre es ${Nombre} y tengo ${edad} años`);
+var miArreglo=[1,2,3,4,5]
+console.log(`El arreglo a mostrar es ${JSON.stringify(miArreglo)}`);
+var persona= {
+    nombre:"Gabriela Rossowski",
+    edad:59
+}   
+const SALUDO=(`Hola! Mi nombre es ${persona.nombre} y tengo ${persona.edad} años`);
+console.log(SALUDO);
 </script >
