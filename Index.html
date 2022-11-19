@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <script>
-// Creacion de objetos de forma concisa
-const crearPersona=(nombre, edad, idioma) => ({nombre,edad,idioma});
-console.log(crearPersona("Omar Delbono", 61, "Español"))
-//Metodos
-//* Valores de una propiedad que corresponden a una funcion
-const persona= {
-    nombre: "Graciela",
-    presentarse() {
-        return(` Hola! mi nombre es ${this.nombre} `)
-    }
-};
-console.log(persona.presentarse());
+//Definicion de Clases
+//* Es una forma concisa de creacion de un objeto
+class TransbordadorEspacial {
+    constructor(planeta) {
+        this.planeta=planeta;
+        }
+ }
+ var zeus=new TransbordadorEspacial("Jupiter");
+ console.log(zeus.planeta);
 
+ var apolo=new TransbordadorEspacial("Marte")
+ console.log(apolo.planeta);
+
+class Mascota {
+    constructor(nombre,edad) {
+        this.nombre=nombre;
+        this.edad=edad;
+    } 
+}
+var miMascota=new Mascota("Brina" , 2)
+var tuMascota=new Mascota("Luly" , 3) 
+console.log(miMascota.nombre);
+console.log(miMascota.edad);
+console.log(tuMascota.nombre);
+console.log(tuMascota.edad);
 </script >
