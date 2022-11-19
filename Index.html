@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <script>
-//Plantillas Literales
-//1) Se utiliza el backtick(acento invertido) en vez de las comillas
-//2) pueden contener comillas simples y dobles
-//3) las lineas se preservan como se escriben en el codigo
-var a=7;
-console.log(`el valor de a es ${a}`);
-var Nombre="Matias";
-var edad=22;
-console.log(`Mi nombre es ${Nombre} y tengo ${edad} años`);
-var miArreglo=[1,2,3,4,5]
-console.log(`El arreglo a mostrar es ${JSON.stringify(miArreglo)}`);
-var persona= {
-    nombre:"Gabriela Rossowski",
-    edad:59
-}   
-const SALUDO=(`Hola! Mi nombre es ${persona.nombre} y tengo ${persona.edad} años`);
-console.log(SALUDO);
+// Creacion de objetos de forma concisa
+const crearPersona=(nombre, edad, idioma) => ({nombre,edad,idioma});
+console.log(crearPersona("Omar Delbono", 61, "Español"))
+//Metodos
+//* Valores de una propiedad que corresponden a una funcion
+const persona= {
+    nombre: "Graciela",
+    presentarse() {
+        return(` Hola! mi nombre es ${this.nombre} `)
+    }
+};
+console.log(persona.presentarse());
+
 </script >
